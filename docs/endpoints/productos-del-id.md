@@ -1,23 +1,16 @@
-
-# Endpoint: `POST /tarjetas`
+# Endpoint: `POST /materiales/del/id`
 ## Crear Tarjeta 
 
 - **Método HTTP:** POST
 - **URL:** /tarjetas
 - **Descripción:** Crea una nueva tarjeta 
+- **Parámetros de URL:** 
+  {id} (obligatorio): Identificador único del material a eliminar.
   
 ## Ejemplo de uso
   ```json
-  [
-    POST /tarjetas
-    Content-Type: application/json
-    {
-        "tipo": "Crédito",
-        "nombre_titular": "John Doe",
-        "numero_tarjeta": "1234567890123456",
-        "fecha_vencimiento": "2024-12-31"
-    }
-  ]
+  DELETE /materiales/del/123
+
 ```
 
 ## Respuesta de confirmación
@@ -26,9 +19,8 @@
 
   ```json
   {
-    "status": 201,
-    "message": "Created"
-  }
+  "message": "Successfully deleted"
+    }
   ```
 
 ## Respuestas de Errores Posibles
@@ -36,8 +28,15 @@
 
   ```json
     {
-    "errno": 400,
-    "error": "Bad Request"
+  "errno": 404,
+  "error": "Not found"
+    }
+  ```
+
+  ```json
+    {
+  "errno": 500,
+  "error": "Internal Server Error"
     }
   ```
 

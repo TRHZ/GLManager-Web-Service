@@ -19,13 +19,8 @@ app.get('/', (req, res) => {
 
 // Rutas para usuarios
 app.get('/user', UserController.indexGet);
-app.get('/user/:id', UserController.itemGet);
-app.post('/user', UserController.indexPost);
-app.put('/user/:id', UserController.itemPut);
-app.patch('/user/:id', UserController.itemPatch);
 app.post('/login', UserController.login);
 app.post('/account', UserController.crearCuenta);
-
 
 // Rutas para productos
 app.get('/productos', ProductController.indexGet);
@@ -51,7 +46,6 @@ app.get('/all/:id', AllController.consultById);
 app.post('/all/prodadd', AllController.addProduct);
 app.post('/all/matadd', AllController.addMaterial);
 app.delete('/all/del', AllController.deleteItem);
-
 
 app.get('/lowstock', LowStockController.indexGet);
 

@@ -3,32 +3,23 @@
 Bienvenido a la documentación de la API para mi proyecto "coin-sage". 
 A continuación, se presenta una lista de endpoints disponibles con enlaces a sus respectivas documentaciones detalladas.
 
-## Usuarios
+## Materiales
 | Recurso                    | Descripción |
 | -------------------------- | ----------- |
-| [`GET /usuarios`](./endpoints//get-usuarios.md)| Recupera la lista de todos los usuarios o de uno en especifico|
-| [`POST /usuarios`](./endpoints//post-usuarios.md)| Crear un nuevo usuario|
-| [`PUT /usuarios`](./endpoints//put-usuarios.md)| Actualizar datos de un usuario|
-| [`PATCH /usuarios/{usuarioId}`](./endpoints//patch-usuarios.md)| Actualizar parcialmente los datos de un usuario existente|
+| [`POST /materiales/add`](./endpoints/materiales-add.md)| Agregar un nuevo material |
+| [`DELETE /materiales/{id}`](./endpoints/materiales-del-id.md)| Borrar un material existente |
+| [`GET /materiales/{id}`](./endpoints/materiales-id.md)| Obtener los detalles de un material específico |
 
-## Tarjetas
+## Productos
 | Recurso                    | Descripción |
 | -------------------------- | ----------- |
-| [`GET /tarjetas`](./endpoints//get-tajetas.md)   | Obtener las tarjetas registradas|
-| [`POST /tarjetas`](./endpoints//post-tarjetas.md)   | Agregar una nueva tarjeta|
-| [`PUT /tarjetas/:id`](./endpoints//put-tarjetas.md)| Actualizar sobre tarjetas de usuarios|
-| [`DELETE /tarjetas/:id`](./endpoints//del-tarjetas.md)| Borrar tarjetas de usuarios|
+| [`POST /productos/add`](./endpoints/productos-add.md)| Agregar un nuevo producto |
+| [`DELETE /productos/{id}`](./endpoints/productos-del-id.md)| Borrar un producto existente |
+| [`GET /productos/{id}`](./endpoints/productos-id.md)| Obtener los detalles de un producto específico |
 
-
-## Transacciones
+## Búsqueda y Listados
 | Recurso                    | Descripción |
 | -------------------------- | ----------- |
-| [`GET /transacciones`](./endpoints//get-transacciones.md)   | Permite obtener todas las transacciones registradas |
-| [`POST /transacciones`](./endpoints//post-transacciones.md)   | Registrar transacciones de usuarios |
-
-
-## Categorias de gastos
-| Recurso                    | Descripción |
-| -------------------------- | ----------- |
-| [`GET /categorias`](./endpoints//get-categorias.md)   | Obtener las categorías de gastos de los usuario|
-| [`POST /categorias`](./endpoints//post-categorias.md)   | Registrar una categorias de gastos o ingresos |
+| [`GET /all-recent`](./endpoints/all-recent.md)   | Obtener una lista de los elementos más recientes |
+| [`GET /all-search`](./endpoints/all-search.md)   | Buscar entre todos los elementos disponibles |
+| [`GET /lowstock`](./endpoints/lowstock.md)   | Obtener una lista de los elementos con bajo stock |

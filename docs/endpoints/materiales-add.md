@@ -1,22 +1,22 @@
-
-# Endpoint: `POST /categorias`
-## Crear Tarjeta 
+# Endpoint: `POST /materiales/add`
+## Agregar materiales a la tabla 
 
 - **Método HTTP:** POST
-- **URL:** /categorias
-- **Descripción:** Agregar una nueva categoría de gasto o ingreso
+- **URL:** /materiales/add
+- **Descripción:** Permite al usuario añadir datos a su tabla respectiva
   
 ## Ejemplo de uso
   ```json
-  [
-    POST /categorias
-    Content-Type: application/json
-    {
-    "usuario_id": 1,
-    "nombre": "Gymnasio",
-    "descripcion": "Gastos mensuales"
-    }
-  ]
+  POST /materiales/add
+Content-Type: application/json
+
+{
+  "nombre": "Material Ejemplo",
+  "descripcion": "Descripción del material",
+  "cantidad": 100,
+  "stock_minimo": 50,
+  "fecha_entrada": "2024-06-03"
+}
 ```
 
 ## Respuesta de confirmación
@@ -37,6 +37,13 @@
     {
     "errno": 400,
     "error": "Bad Request"
+    }
+  ```
+
+    ```json
+    {
+  "errno": 500,
+  "error": "Internal Server Error"
     }
   ```
 

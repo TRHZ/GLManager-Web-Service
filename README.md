@@ -1,10 +1,14 @@
 # API para proyecto final
-El presente repositorio muestra la base de una posible implementación de un servicio web para el desarrollo
- de mi proyecto de la especialidad.
+Se modifico el servicio web para ser implementado en mi proyecto para la especialidad.
+
+## Datos a conocer
+   **No todos las rutas funcionan**
+   Me refiero a que no todas las rutas estan configuradas al 100%, es por ello avisar que las utilizadas son las unicas funcionales, el resto son extras.
 
 ## Tabla de contenido
 
 - [API para proyecto final](#api-para-proyecto-final)
+  - [Datos a conocer](#datos-a-conocer)
   - [Tabla de contenido](#tabla-de-contenido)
   - [Requisitos de instalación](#requisitos-de-instalación)
   - [Instrucciones para la instalación](#instrucciones-para-la-instalación)
@@ -20,28 +24,27 @@ Debes asegúrate de tener instalado y configurado Docker antes de comenzar.
 ## Instrucciones para la instalación
 
 1. Clonar el repositorio en la máquina local:
-   
-   ```sh
-   git clone //github.com/MauricioASG/coin-sage.git
-   ```
+
+```sh
+https://github.com/TRHZ/GLManager-Web-Service.git
+```
 
 2. Navegar al directorio del proyecto:
    
    ```sh
-   cd coin-sage
+   cd GLManager-Web-Service
    ```
 
 3. Ejecutar el siguiente comando para iniciar los contenedores:
 
-    ```sh
-    docker-compose up -d
-    ```
-
     > **IMPORTANTE**
-    >
     > Debe estar iniciado el Docker engine para ejecutar el comando anterior,
     > si no lo está, se devolverá un mensaje de error indicando que no se
     > encontró el docker daemon.
+
+    ```sh
+    docker-compose up -d
+    ```
 
 4. La API estará disponible en `http://localhost:3050`.
 

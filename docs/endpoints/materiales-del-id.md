@@ -1,31 +1,26 @@
-# Endpoint: `POST /transacciones`
+# Endpoint: `POST /materiales/del/id`
 ## Crear Tarjeta 
 
 - **Método HTTP:** POST
-- **URL:** /transacciones
-- **Descripción:** Agrega una nueva transacción
+- **URL:** /tarjetas
+- **Descripción:** Crea una nueva tarjeta 
+- **Parámetros de URL:** 
+  {id} (obligatorio): Identificador único del material a eliminar.
   
 ## Ejemplo de uso
   ```json
-  [
-    POST /transacciones
-    Content-Type: application/json
-    {
-        "usuario_id": 5,
-        "monto": "20.00",
-        "tipo": "Gasto"
-    }
-  ]
+  DELETE /materiales/del/123
+
 ```
 
 ## Respuesta de confirmación
+
 - Código 201 indica que se ha creado un recurso de acuerdo con la solicitud POST.
 
   ```json
   {
-    "status": 201,
-    "message": "Created"
-  }
+  "message": "Successfully deleted"
+    }
   ```
 
 ## Respuestas de Errores Posibles
@@ -33,8 +28,15 @@
 
   ```json
     {
-    "errno": 400,
-    "error": "Bad Request"
+  "errno": 404,
+  "error": "Not found"
+    }
+  ```
+
+  ```json
+    {
+  "errno": 500,
+  "error": "Internal Server Error"
     }
   ```
 
