@@ -6,11 +6,6 @@ CREATE DATABASE IF NOT EXISTS greenlink;
 -- Usar la base de datos
 USE greenlink;
 
-CREATE TABLE categorias (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL
-);
-
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,

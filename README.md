@@ -41,6 +41,8 @@ https://github.com/TRHZ/GLManager-Web-Service.git
     > Debe estar iniciado el Docker engine para ejecutar el comando anterior,
     > si no lo está, se devolverá un mensaje de error indicando que no se
     > encontró el docker daemon.
+    >
+    > **NOTA**: Tambien debes de ejecutar la [Base de datos](database.sql), en mi conocimiento lo ejecuto con https://www.heidisql.com he trabajado con el para ejecutarla pero es ya cada quien como dese, la contraseña que uso es 12345 [HeidiSQL](docs/HeidiSQL.jpg)
 
     ```sh
     docker-compose up -d
